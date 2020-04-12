@@ -39,6 +39,14 @@ class covData(object):
         c.close()
         return x
 
+    def sql_exec_full(self, indate):
+        c = self.sql().cursor()
+        l = []
+        for i in c.execute('SELECT * FROM covid WHERE date=:date', {'date': indate}):
+            l.append(list(i))
+        c.close()
+        return l
+
     def add_sql_cov(self, total_ill, today_ill, total_rec, total_dead):
         c = self.sql()
         c.cursor()

@@ -1,4 +1,4 @@
-from stopcovparse import all_cities
+from stopcovparse import all_cities, getSiteData, update
 from stopcov_db import covData
 from datetime import datetime, date, time
 
@@ -12,5 +12,10 @@ class dbHelper():
                 x = db.sql_exec_city(i, date)
                 return x
 
+    def return_full_day(date):
+        update()
+        x = db.sql_exec_full(date)
+        return x
 
-print(dbHelper.return_city_today('moskva'))
+
+#print(dbHelper.return_city_today('moskva'))

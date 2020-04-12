@@ -71,8 +71,9 @@ class all_cities():
             callback.append(n[4])
         return callback
 
-f = getSiteData()
-#d = all_cities()
-f.data()
-f.getTotal()
-all_cities.get()
+class update():
+    def __init__(self):
+        f = getSiteData()
+        f.data()
+        f.getTotal()
+        all_cities.get()
