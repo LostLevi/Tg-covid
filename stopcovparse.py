@@ -63,12 +63,16 @@ class getSiteData():
         return final_data
 
 class all_cities():
-    def get(site_data):
+    def get():
+        f = getSiteData()
+        site_data = f.data()
         callback = []
         for n in site_data:
             callback.append(n[4])
         return callback
 
 f = getSiteData()
+#d = all_cities()
 f.data()
 f.getTotal()
+all_cities.get()

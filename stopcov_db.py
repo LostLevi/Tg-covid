@@ -2,6 +2,7 @@ import sqlite3 as sq
 import os
 from datetime import datetime, date, time
 
+
 path = os.path.dirname(os.path.abspath(__file__)) + '\\'
 date = date.today().strftime("%Y-%m-%d")
 
