@@ -21,7 +21,7 @@ class covData(object):
         c.cursor()
         c.execute("CREATE TABLE IF NOT EXISTS {}(date PRIMARY KEY,city, ill, good, dead)".format(trans_city))
         c.close()
-        print('База обновленна, таблицы созданы')
+        #print('База обновленна, таблицы созданы')
 
     def add_sql(self, city, ill, good, dead, trans_city):
         c = self.sql()
