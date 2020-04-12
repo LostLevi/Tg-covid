@@ -13,4 +13,4 @@ class dbHelper():
                 return x
 
 
-print(dbHelper.return_city('moskva'))
+print(dbHelper.return_city_today('moskva'))
