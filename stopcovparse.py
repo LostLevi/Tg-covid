@@ -74,6 +74,4 @@ class all_cities():
 class update_db():
     def __init__(self):
         f = getSiteData()
-        f.data()
         f.getTotal()
-        all_cities.get()
