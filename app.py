@@ -6,6 +6,7 @@ from helpers import dbHelper
 from telebot import apihelper
 import config
 import strings
+from stopcovparse import update_db
 
 apihelper.proxy = {
   'https': config.proxy
@@ -45,6 +46,7 @@ def start(message):
 def callback_h(update):
     markup = keyboard()
     message = update.message
+    #update_db()
     all_data = dbHelper.return_full_day(dateToday)
     illed = all_data[0][1]
     day_stat_ill = all_data[0][2]

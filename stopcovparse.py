@@ -71,7 +71,7 @@ class all_cities():
             callback.append(n[4])
         return callback
 
-class update():
+class update_db():
     def __init__(self):
         f = getSiteData()
         f.data()

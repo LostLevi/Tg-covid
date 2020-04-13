@@ -2,7 +2,6 @@ import sqlite3 as sq
 import os
 from datetime import datetime, date, time
 
-
 path = os.path.dirname(os.path.abspath(__file__)) + '\\'
 date = date.today().strftime("%Y-%m-%d")
 
@@ -27,7 +26,7 @@ class covData(object):
         c = self.sql()
         c.cursor()
         insert = [date, city, ill, good, dead]
-        c.execute("INSERT OR IGNORE INTO {} VALUES(?,?,?,?,?)".format(trans_city), insert)
+        c.execute("INSERT OR REPLACE  INTO {} VALUES(?,?,?,?,?)".format(trans_city), insert)
         c.commit()
         c.close()
 
@@ -52,7 +51,7 @@ class covData(object):
         c.cursor()
         c.execute("CREATE TABLE IF NOT EXISTS covid(date PRIMARY KEY, total_ill, today_ill, total_rec, total_dead)")
         insert = [date, total_ill, today_ill, total_rec, total_dead]
-        c.execute("INSERT OR IGNORE INTO covid VALUES(?,?,?,?,?)", insert)
+        c.execute("INSERT OR REPLACE INTO covid VALUES(?,?,?,?,?)", insert)
         c.commit()
         print('Данные успешно добавлены')
         c.close()
