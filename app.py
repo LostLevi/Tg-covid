@@ -57,6 +57,4 @@ def callback_h(update):
         send_mess = strings.full_msg(illed, day_stat_ill, res, deaths, il_proc)
         bot.send_message(message.chat.id, send_mess, parse_mode = 'html', reply_markup = markup )
 
-
-
 bot.polling(none_stop=True)
