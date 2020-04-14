@@ -18,7 +18,6 @@ dateToday = date.today().strftime("%Y-%m-%d")
 prevDay = date.today() - timedelta(days=1)
 prevDay = prevDay.strftime('%Y-%m-%d')
 
-
 covid19 = COVID19Py.COVID19()
 latest_world_info = covid19.getLatest()
 latest_world_actual = latest_world_info['confirmed']
